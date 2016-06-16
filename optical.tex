@@ -1,0 +1,393 @@
+\documentclass[a4paper,11pt]{article}
+% \linespread{2.}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsbsy}
+\usepackage{amsmath}
+\usepackage[varg]{txfonts}
+\usepackage{mathrsfs}
+\usepackage{upgreek}
+%\usepackage [latin1]{inputenc}
+\usepackage{verbatim}
+\usepackage{array}
+\usepackage{color}
+\pagestyle{plain}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\newcommand{\braket}[1]{\langle {#1} \rangle }
+\newcommand{\ket}[1]{|{#1} \rangle }
+\newcommand{\bra}[1]{\langle {#1}|}
+\newcommand\idop{\mathds 1}
+\DeclareMathAlphabet{\mathpzc}{OT1}{pzc}{m}{it}
+\title{Optical Potential for Elastic Scattering}
+\begin{document}
+\maketitle
+%\tableofcontents
+\section{Schematic 2--channels model}
+Let us first consider the example of the scattering between a proton and a nucleus $A$. The whole system can be described with relative $p-A$ coordinate $\mathbf{r}$ and the set of internal coordinates $\xi$ corresponding to the nucleons of $A$. The total hamiltonian is
+\begin{equation}\label{eq1}
+H(\xi,\mathbf{r})=H_{A}(\xi)+T(\mathbf{r})+V(\xi,\mathbf{r}).
+\end{equation}
+We are interested in describing  the elastic scattering between $p$ and $A$, corresponding to the wavefunction $\Psi_0(\xi,\mathbf{r})=\chi_0(\mathbf{r})\phi_0(\xi)$.
+We will now try to see what happens when the elastic channels couples to just one more channel. Within this approximation, the wavefunction can be written as
+\begin{equation}\label{eq2}
+\Psi(\xi,\mathbf{r})=\chi_0(\mathbf{r})\phi_0(\xi)+\chi_1(\mathbf{r})\phi_1(\xi),
+\end{equation}
+with
+\begin{eqnarray}\label{eq3}
+\nonumber H_A(\xi)\phi_0(\xi)&=\varepsilon_0\phi_0(\xi)\\
+H_A(\xi)\phi_1(\xi)&=\varepsilon_1\phi_1(\xi).
+\end{eqnarray}
+Then, the Schr\"{o}dinger equation
+\begin{equation}\label{eq4}
+(H-E)\Psi=0
+\end{equation}
+can be projected on the two internal wavefunctions $\phi_0(\mathbf{r}),\phi_1(\mathbf{r})$ and decomposed in the two coupled equations for the relative motion wavefunctions $\chi_0(\mathbf{r}),\chi_1(\mathbf{r})$
+\begin{eqnarray}\label{eq5}
+\nonumber \label{eq12}\left(T(\mathbf{r})+V_{00}(\mathbf{r})-\frac{\hbar^2k_0^2}{2 \mu}\right)\chi_0(\mathbf{r})&=-V_{01}(\mathbf{r})\chi_1(\mathbf{r})\\
+\label{eq7} \left(T(\mathbf{r})+V_{11}(\mathbf{r})-\frac{\hbar^2k_1^2}{2 \mu}\right)\chi_1(\mathbf{r})&=-V_{10}(\mathbf{r})\chi_0(\mathbf{r}),
+\end{eqnarray}
+where $\tfrac{\hbar^2k_0^2}{2 \mu}=E-\varepsilon_0$, $\tfrac{\hbar^2k_1^2}{2 \mu}=E-\varepsilon_1$ and
+\begin{equation}\label{eq6}
+V_{ij}(\mathbf{r})=\int d\xi \phi^*_i(\xi)V(\xi,\mathbf{r})\phi_j(\xi).
+\end{equation}
+According to (\ref{eq7}), we can express $\chi_1(\mathbf{r})$ in the form
+
+\begin{equation}\label{eq8}
+\chi_1(\mathbf{r})=-\int d\mathbf{r}'G(\mathbf{r},\mathbf{r}')V_{10}(\mathbf{r}')\chi_0(\mathbf{r}'),
+\end{equation}
+where $G(\mathbf{r},\mathbf{r}')$ is the Green function obeying
+\begin{equation}\label{eq9}
+ \left(T(\mathbf{r})+V_{11}(\mathbf{r})-\frac{\hbar^2k_1^2}{2 \mu}\right)G(\mathbf{r},\mathbf{r}')=\delta(\mathbf{r}-\mathbf{r}').
+\end{equation}
+The Green function can be written as
+
+\begin{equation}\label{eq10}
+G(\mathbf{r},\mathbf{r}')=\left\{\begin{array}{cc}
+                                   f(\mathbf{r})P(\mathbf{r}') & \text{if}\quad \mathbf{r}>\mathbf{r}' \\
+                                   f(\mathbf{r}')P(\mathbf{r}) & \text{if} \quad \mathbf{r}'>\mathbf{r}
+                                 \end{array}
+\right.
+\end{equation}
+where $P(\mathbf{r})\;(f(\mathbf{r}))$ is the solution  regular (irregular) at the origin of
+\begin{equation}\label{eq11}
+ \left(T(\mathbf{r})+V_{11}(\mathbf{r})-\frac{\hbar^2k_1^2}{2 \mu}\right)\psi(\mathbf{r})=0, \quad \psi(\mathbf{r})=P(\mathbf{r}),f(\mathbf{r}).
+\end{equation}
+We can then substitute in (\ref{eq12}) to find
+
+\begin{align}\label{eq13}
+\nonumber \left(T(\mathbf{r})+V_{00}(\mathbf{r})-\frac{\hbar^2k_0^2}{2 \mu}\right)\chi_0(\mathbf{r})
+ \\+V_{01}(\mathbf{r})\int d\mathbf{r}' f(\mathbf{r}_>)&P(\mathbf{r}_<)V_{10}(\mathbf{r}')\chi_0(\mathbf{r}')=0
+\end{align}
+\section{Elastic scattering coupled to the 1--n transfer}
+Let us now specifically consider the reaction $A(p,p)A$ in which a proton is elastically scattered by a nucleus $A$. In the present context, we will take into account explicitly the coupling with the 1--neutron transfer channel $d+B(=A-1)$. The system will be described with the model wavefunction
+\begin{align}\label{eq15}
+\Psi(\xi_B,\mathbf  r_n,\mathbf r_p)=\phi_A(\xi_B,\mathbf r_n)\chi_p(\mathbf r_p)+\phi_B(\xi_B)\phi_d(\mathbf r_{pn})\chi_d(\mathbf r_d),
+\end{align} 
+where the intrinsic wavefunctions are eigenstates of the internal Hamiltonians of the deuteron and the nuclei $A$ and $B$,
+\begin{align}\label{eq18}
+\nonumber h_d\phi_d&=\epsilon_d\phi_d,\\
+\nonumber h_A\phi_A&=\epsilon_A\phi_A,\\
+h_B\phi_B&=\epsilon_B\phi_B.
+\end{align} 
+The Hamiltonian can be written in the $p$-- or in the $d$--channel,
+\begin{align}\label{eq14}
+\nonumber H&=T_p+h_A+U_p+V_p,\\
+H&=T_d+h_d+h_B+U_d+V_d,
+\end{align}
+with
+\begin{align}\label{eq16}
+\nonumber V_p&=V_{pn}(r_{pn})+V_{pB}(r_p)-U_p(r_p),\\
+U_p&=\braket{\phi_A|(V_{pn}+V_{pB})|\phi_A},
+\end{align}
+and
+\begin{align}\label{eq17}
+\nonumber V_d&=V_{pB}(r_p)+V_{nB}(r_n)-U_d(r_d),\\
+U_d&=\braket{\phi_B\phi_d|(V_{pB}+V_{nB})|\phi_B\phi_d}.
+\end{align}
+Note that $\braket{\phi_B\phi_d|V_d|\phi_B\phi_d}=\braket{\phi_A|V_p|\phi_A}=0$. If we neglect the coupling to other channels, we have
+\begin{align}\label{eq19}
+\left(H-E\right)\ket{\Psi}=0.
+\end{align}
+The set of coupled equations can be obtained projecting out the $p$ and $d$ channels,
+\begin{align}\label{eq20}
+\nonumber &(H_p-E_p)\chi_p=\bra{\phi_A}V_p\ket{\phi_B\phi_d\chi_d},\\
+&(H_d-E_d)\chi_d=(H_d-E_d)\braket{\phi_B\phi_d|\phi_A\chi_p}+\bra{\phi_B\phi_d}V_d\ket{\phi_A\chi_p},
+\end{align}
+where $E_p=E-\epsilon_A$, $E_d=E-\epsilon_d-\epsilon_B$ and
+with
+\begin{align}\label{eq21}
+\nonumber H_p&=T_p+U_p,\\
+H_d&=T_d+U_d.
+\end{align}
+Let's neglect excitations of the core $B$ in the reaction process as well as in the structure of $A$. The wavefunction of the ground state of nucleus $A$ can then be written as
+\begin{align}
+\nonumber \phi_A(\xi_B,\mathbf r_n)=\phi_B(\xi_B)\sum_n a_n\phi_n(\mathbf r_n)\,,
+\end{align}
+and
+\begin{align}\label{eq23}
+\nonumber (H_p-E_p)\chi_p(\mathbf r_p)&=\sum_n a_n F_{1,n}(\mathbf r_p)\\
+(H_d-E_d)\chi_d(\mathbf r_d)&=(H_d-E_d)\sum_n a_n g_n(\mathbf r_d)+\sum_n a_n F_{2,n}(\mathbf r_d),
+\end{align}
+where we have defined
+\begin{align}\label{eq22}
+\nonumber&F_{1,n}(\mathbf r_p)=\int \phi_n^*(\mathbf r_n)V_p(r_{pn},r_p)\phi_d(\mathbf r_{pn})\chi_d(\mathbf r_d)d\mathbf r_n\,,\\
+ \nonumber&F_{2,n}(\mathbf r_d)= \int \phi_d^*(\mathbf r_{pn})V_d(r_{p},r_n)\phi_n(\mathbf r_n)\chi_p(\mathbf r_p)d\mathbf r_{pn},\\
+  & g_n(\mathbf r_d)=\int \phi_d^*(\mathbf r_{pn})\phi_n(\mathbf r_{n})\chi_p(\mathbf r_p)d\mathbf r_{pn}.
+\end{align}
+Defining the Green's function
+\begin{align}\label{eq30}
+G=\frac{1}{E_d-H_d+i\epsilon},
+\end{align}
+we can solve for $\chi_d$ using the second equation in (\ref{eq23}),
+\begin{align}\label{eq24}
+&\chi_d(\mathbf r_d)=\sum_n a_n g_n(\mathbf r_d)+\sum_n a_n\int G(\mathbf r_d,\mathbf r_d')F_{2,n}(\mathbf r'_d)d\mathbf r_d'\,,
+\end{align}
+from the first equation in (\ref{eq23}),
+\begin{align}\label{eq26}
+\left(T_p-U_p^{OPT}-E_p\right)\chi_p(\mathbf r_p)=0\,,
+\end{align}
+with
+\begin{equation}\label{eq27}
+\nonumber U_{p}^{OPT}\chi_p(\mathbf r_p)=\left(U_p(r_p)+U_g(\mathbf r_p,\mathbf r'_p)+U_F(\mathbf r_p,\mathbf r'_p)\right)\chi_p(\mathbf r_p),
+\end{equation}
+where we have divided the optical potential in a local, an overlap and a transfer component,
+ \begin{align}\label{eq52}
+\nonumber U_g(\mathbf r_p,\mathbf r'_p)\chi_p(\mathbf r_p)=&\sum_n a_n\int \phi_n^*(\mathbf r_n)V_p(r_{pn},r_p)\phi_d(\mathbf r_{pn})g_n(\mathbf r_d)d\mathbf r_n\\
+\nonumber =\sum_n a_n&\int \phi_n^*(\mathbf r_n)V_p(r_{pn},r_p)\phi_d(\mathbf r_{pn})\int \phi_d^*(\mathbf r'_{pn})\phi_n(\mathbf r'_{n})\chi_p(\mathbf r'_p)d\mathbf r'_{pn}d\mathbf r_n\\
+\nonumber U_F(\mathbf r_p,\mathbf r'_p)\chi_p(\mathbf r_p)=&\sum_n a_n\int  \phi_n^*(\mathbf r_n)V_p(r_{pn},r_p)\phi_d(\mathbf r_{pn})\int G(\mathbf r_d,\mathbf r_d')F_{2,n}(\mathbf r'_d)d\mathbf r_d'd\mathbf r_n\\
+\nonumber =\sum_n a_n\int  \phi_n^*(\mathbf r_n)&V_p(r_{pn},r_p)\phi_d(\mathbf r_{pn})\\
+\times \int G(\mathbf r_d,\mathbf r_d')&\phi_d^*(\mathbf r'_{pn})V_d(r'_{p},r'_n)\phi_n(\mathbf r'_n)\chi_p(\mathbf r'_p)d\mathbf r'_{pn}d\mathbf r_d'd\mathbf r_n.
+ \end{align}
+The non--local term can be made local within the local--momentum approximation,
+\begin{align}\label{eq28}
+\chi_p(\mathbf r'_p)\approx e^{i\mathbf k_0(r_p)(\mathbf r_p-\mathbf r'_p)}\chi_p(\mathbf r_p),
+\end{align}
+with 
+\begin{align}\label{eq29}
+\mathbf k_0(r_p)=\frac{1}{\hbar}\sqrt{2\mu\left(E_p-U_p(r_p)\right)}\,\hat k_p\,.
+\end{align}
+We can then define a local version of the optical potential,
+\begin{align}\label{eq31}
+U_F(\mathbf r_p,\mathbf r'_p)\chi_p(\mathbf r_p)\approx U^L_F(\mathbf r_p)\chi_p(\mathbf r_p),
+\end{align}
+with
+ \begin{align}\label{eq32}
+\nonumber U^L_F(\mathbf r_p) &=\sum_n a_n e^{i\mathbf k_0(r_p)\mathbf r_p}\int  \phi_n^*(\mathbf r_n)V_p(r_{pn},r_p)\phi_d(\mathbf r_{pn})\\
+\times \int G(\mathbf r_d,\mathbf r_d')&\phi_d^*(\mathbf r'_{pn})V_d(r'_{p},r'_n)\phi_n(\mathbf r'_n)d\mathbf r'_{pn}e^{-i\mathbf k_0(r_p)\mathbf r'_p}d\mathbf r_d'd\mathbf r_{pn}'d\mathbf r_n.
+ \end{align}
+\subsection{Partial wave decomposition}
+%Let's first write down the partial wave decomposition of the form factors,
+%\begin{align}\label{eq39}
+%V_{1(2)}(\mathbf r_{p})=\sum_{lm}\mathcal V^{lm}_{1(2)}(r_p)Y_m^l(\hat r_p),
+%\end{align}
+%with
+%\begin{align}\label{eq40}
+%\mathcal V^{lm}_{1(2)}(r_p)=\int d\Omega_p Y_m^{l*}(\hat r_p) V_{1(2)}(\mathbf r_p)
+%\end{align}
+%
+%So
+%\begin{align}\label{eq41}
+%\nonumber\mathcal V^{lm}_{1}(r_p)=\frac{1}{\sqrt{4\pi(2l+1)}}&\int r^2_n\,dr_nd\Omega_nd\Omega_p\\
+%&\times u_n(r_n)u_d(r_{pn})V_{pn}(r_{pn})\left[Y^{l}(\hat r_n) Y^{l}(\hat r_p)\right]^0_0.
+%\end{align}
+%If we take $\mathbf r_p$ to be along the $z$--axis, we get
+%\begin{align}\label{eq42}
+%\mathcal \nonumber V^{lm}_{1}(r_p)=&\frac{2\pi^{1/2}(-1)^m}{\sqrt{(2l+1)}}\int r^2_n\,dr_n \sin\theta\,d\theta u_n(r_n)u_d(r_{pn})\\
+%&\times V_{pn}(r_{pn})Y^{l}_0(\hat r_n)\delta_{l,l_n}\delta_{m,m_n},
+%\end{align}
+
+The Green's function can be written as
+\begin{align}\label{eq44}
+G(\mathbf r_d,\mathbf r_d')=\sum_{l_d}\sqrt{2l_d+1}\frac{f_{l_d}(r_{d<})g_{l_d}(r_{d>})}{k_dr_dr'_d}\left[Y^{l_d}(\hat r_d) Y^{l_d}(\hat r'_d)\right]^0_0,
+\end{align}
+the plane wave is
+\begin{align}\label{eq45}
+e^{-i\mathbf k_0(r_p)\mathbf r_p'}=4\pi\sum_{l_p}\sqrt{2l_p+1}\,j_{l_p}(k_0(r_p) r'_p)\left[Y^{l_p}(\hat r'_p) Y^{l_p}(\hat k_p)\right]^0_0,
+\end{align}
+where $j_{l_p}$ is a spherical Bessel function.  The neutron wavefunctions are
+\begin{align}\label{eq38}
+\nonumber \phi_n(\mathbf{r}_n)&=u_n(r_n)Y^{l}_{m}(\hat r_n)\\
+\phi_d(\mathbf{r}_{pn})&=\frac{1}{\sqrt{4\pi}}u_d(r_{pn}).
+\end{align}
+Let's consider the product
+\begin{align}\label{eq46}
+\nonumber\left[Y^{l_p}(\hat r'_p) Y^{l_p}(\hat k_p)\right]^0_0&\left[Y^{l_d}(\hat r_d) Y^{l_d}(\hat r'_d)\right]^0_0Y_m^l(\hat r'_n)=\bigl((l_p l_p)_0(l_d l_d)_0|(l_p l_d)_l(l_p l_d)_{l}\bigr)_0\\
+\nonumber&\times \left\{\left[Y^{l_p}(\hat r'_p) Y^{l_d}(\hat r'_d)\right]^l\left[Y^{l_d}(\hat r_d) Y^{l_p}(\hat k_p)\right]^l\right\}^0_0Y_m^l(\hat r'_n)\\
+\nonumber&=\frac{(-1)^{l-m}}{\sqrt{(2l_p+1)(2l_d+1)}}\left[Y^{l_d}(\hat r_d) Y^{l_p}(\hat k_p)\right]^l_m\left[Y^{l_p}(\hat r'_p) Y^{l_d}(\hat r'_d)\right]^l_{-m}Y_m^l(\hat r'_n)\\
+\nonumber &=\frac{1}{\sqrt{(2l+1)(2l_p+1)(2l_d+1)}}\left[Y^{l_d}(\hat r_d) Y^{l_p}(\hat k_p)\right]^l_m\\
+&\times\left\{\left[Y^{l_p}(\hat r'_p) Y^{l_d}(\hat r'_d)\right]^lY^l(\hat r'_n)\right\}^0_0,
+\end{align}
+where we have used
+\begin{equation}\label{eq61}
+\bigl((l_p l_p)_0(l_d l_d)_0|(l_p l_d)_l(l_p l_d)_{l}\bigr)_0=\sqrt{\frac{2l+1}{(2l_p+1)(2l_d+1)}}.
+\end{equation}
+We then have to consider
+ \begin{align}\label{eq47}
+\nonumber&\frac{\sqrt{4\pi}}{k_dr_d\sqrt{2l+1}}\sum_{l_pl_d} \left[Y^{l_d}(\hat r_d) Y^{l_p}(\hat k_p)\right]^l_m\\
+\nonumber&\times\int \left\{\left[Y^{l_p}(\hat r'_p) Y^{l_d}(\hat r'_d)\right]^lY^l(\hat r'_n)\right\}^0_0j_{l_p}(k_0(r_p) r'_p)\\
+&\times \frac{f_{l_d}(r_{d<})g_{l_d}(r_{d>})}{r'_d}  u_d(r'_d)u_n(r'_n)V_{pn}(r'_{pn}) d\mathbf r_d' d\mathbf r_{pn}'d\mathbf r_n.
+ \end{align}
+
+
+Taking $\mathbf r'_d$ and $\mathbf k_p$ in the $z$ direction, we have
+\begin{align}\label{eq43}
+\nonumber\mathbf r'_d&=r'_d\left(0,0,1\right),\\
+\nonumber\mathbf r_{pn}'&=r'_{pn}\left(-\cos\theta,0,\sin\theta\right),\\
+\nonumber \mathbf r'_{n}&=\mathbf r'_d-\frac{1}{2}\mathbf r'_{pn}=\left(\frac{1}{2}r'_{pn}\cos\theta,0,r'_d-\frac{1}{2}r'_{pn}\sin\theta\right),\\
+ \mathbf r'_{p}&=\mathbf r'_d+\frac{1}{2}\mathbf r'_{pn}=\left(-\frac{1}{2}r'_{pn}\cos\theta,0,r'_d+\frac{1}{2}r'_{pn}\sin\theta\right),
+\end{align}
+and, if we define
+ \begin{align}\label{eq48}
+\nonumber I^{l_d}_n(r_d)=&\frac{\sqrt{\pi}}{k_dr_d\,(2l+1)}\sum_{l_p}(2l_p+1)(2l_d+1)\langle l_p\,-m\,l_d\,0\,|\,l\,-m\rangle\\
+\nonumber&\times\langle l_d\,m\,l_p\,0\,|\,l\,0\rangle Y^{l_d}_m(\hat r_d) \int  Y^{l_p}_{-m}(\hat r'_p)Y^{l}_{m}(\hat r'_n)j_{l_p}(k_0(r_p) r'_p)\\
+&\times f_{l_d}(r_{d<})g_{l_d}(r_{d>})u_n(r_n)u_d(r_{pn}) V_{d}(r_{p},r_n,r_d) r'_dr_{pn}^2\sin\theta\, d r_d'dr'_{pn}d\theta.
+ \end{align}
+ we have
+ \begin{align}\label{eq53}
+ \nonumber U^L_F(\mathbf r_p)&=e^{i\mathbf k_0(r_p)\mathbf r_p}\sum_{n} a_n \int u_n^*(r_n)V_p(r_{pn},r_p)u_d(r_{pn})  Y^{l}_{-m}(\hat r_n)Y^{l_d}_m(\hat r_d) I^{l_d}_n(r_d)d\mathbf r_n\\
+ &=e^{i\mathbf k_0(r_p)\mathbf r_p}\sum_{nl'} a_n B_{nl'}(r_p)Y_0^{l'}(\hat r_p),
+ \end{align}
+ with 
+ \begin{equation}\label{eq54}
+ B_{nl'}(r_p)=\sum_{l_d}\int u_n^*(r_n)V_p(r_{pn},r_p)u_d(r_{pn})  Y^{l}_{-m}(\hat r_n)Y^{l_d}_m(\hat r_d)Y^{l'}_0(\hat r_p) I^{l_d}_n(r_d)d\mathbf r_nd\Omega_p.
+ \end{equation}
+Then,
+ \begin{align}\label{eq55}
+ \nonumber B_{nl'}(r_p)=&\frac{1}{\sqrt{2l'+1}}\sum_{l_d}\langle l\,-m\,l_d\,m\,|\,l'\,0\rangle\int u_n^*(r_n)V_p(r_{pn},r_p)u_d(r_{pn})\\
+ &\times  \left\{\left[Y^{l}(\hat r_n)Y^{l_d}(\hat r_d)\right]^{l'}Y^{l'}(\hat r_p)\right\}^0_0 I^{l_d}_n(r_d)d\mathbf r_nd\Omega_p.
+ \end{align}
+ Taking $\mathbf r'_p$ in the $z$ direction, we have
+  \begin{align}\label{eq56}
+  \nonumber B_{nl'}(r_p)=&\frac{4\pi^{3/2}}{\sqrt{2l'+1}}\sum_{l_d}\langle l\,-m\,l_d\,m\,|\,l'\,0\rangle\int u_n^*(r_n)V_p(r_{pn},r_p)u_d(r_{pn})\\
+  &\times  \left[Y^{l}(\hat r_n)Y^{l_d}(\hat r_d)\right]^{l'}_0 I^{l_d}_n(r_d)r^2_n d r_n \sin\theta d\theta.
+  \end{align}
+If $l=0$, $l_d=l_p$, $l'=l_d$ and
+  \begin{align}\label{eq51}
+  \nonumber B_{nl'}(r_p;l=0)=&\frac{2\pi}{\sqrt{2l'+1}}\langle l\,-m\,l'\,m\,|\,l'\,0\rangle\int u_n^*(r_n)V_p(r_{pn},r_p)u_d(r_{pn})\\
+  &\times  Y^{l'}_0(\hat r_d) I^{l'}_n(r_d;l=0)r^2_n d r_n \sin\theta d\theta,
+  \end{align}
+  with
+   \begin{align}\label{eq57}
+  \nonumber I^{l'}_n(r_d;l=0)=&\frac{1}{2k_dr_d}(2l'+1)Y^{l'}_0(\hat r_d) \int  Y^{l'}_0(\hat r'_p)j_{l'}(k_0(r_p) r'_p)f_{l'}(r_{d<})g_{l'}(r_{d>})\\
+  &\times u_n(r_n)u_d(r_{pn}) V_{d}(r_{p},r_n,r_d) r'_dr_{pn}^2\sin\theta\, d r_d'dr'_{pn}d\theta.
+   \end{align}
+The polarization correction to the optical potential 
+ \begin{equation}\label{eq58}
+U^L_F(\mathbf r_p)=e^{i\mathbf k_0(r_p)\mathbf r_p}\sum_{nl'} a_n B_{nl'}(r_p)Y_0^{l'}(\hat r_p),
+ \end{equation}
+is non--central, but we can evaluate the monopole (central) part  along the incident beam direction, 
+ \begin{equation}\label{eq50}
+U^L_F(r_p)=\frac{e^{i k_0(r_p)r_p}}{\sqrt{4\pi}}\sum_{n} a_n B_{n0}(r_p),
+ \end{equation}
+with
+  \begin{equation}\label{eq59}
+   B_{n0}(r_p;l=0)=\sqrt{\pi}\int u_n^*(r_n)V_p(r_{pn},r_p)u_d(r_{pn})   I^{0}_n(r_d;l=0)r^2_n d r_n\,\sin\theta\,d\theta,
+  \end{equation}
+and
+   \begin{align}\label{eq60}
+\nonumber I^{0}_n(r_d;l=0)&=\frac{1}{8\pi k_dr_d} \int j_{0}(k_0(r_p) r'_p)f_{0}(r_{d<})g_{0}(r_{d>})\\
+ &\times u_n(r_n)u_d(r_{pn}) V_{d}(r_{p},r_n,r_d) r'_dr_{pn}^2\, d r_d'dr'_{pn}\,\sin\theta\,d\theta.
+   \end{align}
+
+
+
+
+
+
+
+
+
+% A further simplification can be done considering the no--recoil approximation,
+%\begin{align}\label{eq33}
+%\bar U_p(r_p)\approx V_1(r_p) e^{ik_0(r_p)r_p}\int
+%G(r_p,r_p')V_2(r_p')e^{-ik_0(r_p)r_p'}dr_p'.
+%\end{align}
+% To obtain a simple estimate, we can use the free particle Green's function,
+%\begin{align}\label{eq34}
+% \bar U_p(r_p)\approx \frac{m}{2\pi\hbar^2}V_1(r_p)e^{ik_0(r_p)r_p}\int
+%\frac{e^{ik_d|r_p-r_p'|}}{|r_p'-r_p|}V_2(r_p')e^{-ik_0(r_p)r_p'}dr_p'
+%\end{align} 
+%with 
+%\begin{align}\label{eq35}
+%k_d=\frac{1}{\hbar}\sqrt{2\mu_dE_d}.
+%\end{align} 
+%Within these approximations, the optical potential is
+%\begin{align}\label{eq36}
+%U_{p}^{OPT}\approx U_{p}^{OPT}(r_p)=U_p^{LOC}(r_p)+ \bar U_p(r_p),
+%\end{align}
+%with
+%\begin{align}\label{eq37}
+%\nonumber U_p^{LOC}(r_p)&=U_p(r_p)+V_1(r_p)g(r_p)\\
+%\bar U_p(r_p)&=\frac{m}{2\pi\hbar^2}V_1(r_p)e^{ik_0(r_p)r_p}\int
+%\frac{e^{ik_d|r_p-r_p'|}}{|r_p'-r_p|}V_2(r_p')e^{-ik_0(r_p)r_p'}dr_p'
+%\end{align}
+%\bibliographystyle{apalik
+%\bibliography{C:/Gregory/Broglia/notas_ricardo/nuear_bib}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
