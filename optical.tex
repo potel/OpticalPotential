@@ -105,14 +105,30 @@ and
 \nonumber V_d&=V_{pB}(r_p)+V_{nB}(r_n)-U_d(r_d),\\
 U_d&=\braket{\phi_B\phi_d|(V_{pB}+V_{nB})|\phi_B\phi_d}.
 \end{align}
-Note that $\braket{\phi_B\phi_d|V_d|\phi_B\phi_d}=\braket{\phi_A|V_p|\phi_A}=0$. If we neglect the coupling to other channels, we have
+We will neglect excitations of the core $B$ in the reaction process as well as in the structure of $A$. For simplicity, we will write the wavefunction of the ground state of nucleus $A$  as
+\begin{align}
+\nonumber \phi_A(\xi_B,\mathbf r_n)=\phi_B(\xi_B)\phi_n(\mathbf r_n)\,,
+\end{align}
+ If we neglect the coupling to other channels, we have
 \begin{align}\label{eq19}
 \left(H-E\right)\ket{\Psi}=0.
 \end{align}
-The set of coupled equations can be obtained projecting out the $p$ and $d$ channels,
+We note  that
+\begin{align}\label{eq157}
+\nonumber &\braket{\phi_i|V_i|\phi_i}=0,\\
+&\langle\phi_j|(H-E)|\phi_i\rangle=\left\{\begin{array}{l}
+\braket{\phi_j|V_i|\phi_i}+\braket{\phi_j|\phi_i}(H_i-E_i) \\ 
+\braket{\phi_j|V_j|\phi_i}+(H_j-E_j) \braket{\phi_j|\phi_i},
+\end{array}\right.
+\end{align}
+where we have defined the  channel kinetic energies 
+\begin{equation}\label{eq159}
+E_i=E-\epsilon_i.
+\end{equation}
+The set of coupled equations can be then be written as,
 \begin{align}\label{eq20}
-\nonumber &(H_p-E_p)\chi_p=\bra{\phi_A}V_p\ket{\phi_B\phi_d\chi_d},\\
-&(H_d-E_d)\chi_d=(H_d-E_d)\braket{\phi_B\phi_d|\phi_A\chi_p}+\bra{\phi_B\phi_d}V_d\ket{\phi_A\chi_p},
+\nonumber &(H_p-E_p)\chi_p=-\bra{\phi_n}V_p\ket{\phi_d}\chi_d-(H_p-E_p)\braket{\phi_n|\phi_d}\chi_d,\\
+&(H_d-E_d)\chi_d=-\bra{\phi_d}V_p\ket{\chi_n}\chi_p-\braket{\phi_d|\phi_n}(H_p-E_p)\chi_p,
 \end{align}
 where $E_p=E-\epsilon_A$, $E_d=E-\epsilon_d-\epsilon_B$ and
 with
@@ -120,11 +136,43 @@ with
 \nonumber H_p&=T_p+U_p,\\
 H_d&=T_d+U_d.
 \end{align}
-Let's neglect excitations of the core $B$ in the reaction process as well as in the structure of $A$. The wavefunction of the ground state of nucleus $A$ can then be written as
-\begin{align}
-\nonumber \phi_A(\xi_B,\mathbf r_n)=\phi_B(\xi_B)\sum_n a_n\phi_n(\mathbf r_n)\,,
-\end{align}
-and
+If the neutron state $\phi_n$ is bound, we can drop the second term of the right hand side of (\ref{eq20}) (see notes on transfer),
+ \begin{align}\label{eq62}
+ \nonumber &(H_p-E_p)\chi_p=-\bra{\phi_n}V_p\ket{\phi_d}\chi_d\\
+ &(H_d-E_d)\chi_d=-\bra{\phi_d}V_p\ket{\chi_n}\chi_p-\braket{\phi_d|\phi_n}(H_p-E_p)\chi_p,
+ \end{align}
+or
+ \begin{align}\label{eq63}
+ \nonumber &(H_p-E_p)\chi_p=-\bra{\phi_n}V_p\ket{\phi_d}\chi_d\\
+ &(\tilde H_d-E_d)\chi_d=-\bra{\phi_d}V_p\ket{\phi_n}\chi_p,
+ \end{align}
+ with
+  \begin{align}\label{eq64}
+  \nonumber \tilde H_d&=H_d-\braket{\phi_d|\phi_n}\bra{\phi_n}V_p\ket{\phi_d}=T_d+U_d-\tilde U_d,\\
+   \tilde U_d&=\braket{\phi_d|\phi_n}\bra{\phi_n}V_p\ket{\phi_d}.
+  \end{align}
+  We can then solve for $\chi_d$,
+   \begin{align}\label{eq65}
+\chi_d=\tilde G_d\bra{\phi_d}V_p\ket{\phi_n}\chi_p,
+   \end{align} 
+   with
+      \begin{align}\label{eq66}
+\tilde G_d=(\tilde H_d-E_d)^{-1},
+      \end{align} 
+the equation for $\chi_p$ can then be written as
+      \begin{align}\label{eq67}
+(H_p-E_p)\chi_p=-\bra{\phi_n}V_p\ket{\phi_d}\,\tilde G_d\,\bra{\phi_d}V_p\ket{\phi_n}\chi_p,
+      \end{align}
+or
+\begin{align}\label{eq68}
+(\tilde H_p-E_p)\chi_p=0,
+\end{align}      
+with
+\begin{align}\label{eq69}
+\nonumber \tilde H_p&=T_p+U_p+\tilde U_p,\\
+\tilde U_p&=\bra{\phi_n}V_p\ket{\phi_d}\,\tilde G_d\,\bra{\phi_d}V_p\ket{\phi_n}.
+\end{align}  
+
 \begin{align}\label{eq23}
 \nonumber (H_p-E_p)\chi_p(\mathbf r_p)&=\sum_n a_n F_{1,n}(\mathbf r_p)\\
 (H_d-E_d)\chi_d(\mathbf r_d)&=(H_d-E_d)\sum_n a_n g_n(\mathbf r_d)+\sum_n a_n F_{2,n}(\mathbf r_d),
