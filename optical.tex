@@ -125,10 +125,10 @@ where we have defined the  channel kinetic energies
 \begin{equation}\label{eq159}
 E_i=E-\epsilon_i.
 \end{equation}
-The set of coupled equations can be then be written as,
+We can then choose to write the set of coupled equations as,
 \begin{align}\label{eq20}
 \nonumber &(H_p-E_p)\chi_p=-\bra{\phi_n}V_p\ket{\phi_d}\chi_d-(H_p-E_p)\braket{\phi_n|\phi_d}\chi_d,\\
-&(H_d-E_d)\chi_d=-\bra{\phi_d}V_p\ket{\chi_n}\chi_p-\braket{\phi_d|\phi_n}(H_p-E_p)\chi_p,
+&(H_d-E_d)\chi_d=-\bra{\phi_d}V_p\ket{\phi_n}\chi_p-\braket{\phi_d|\phi_n}(H_p-E_p)\chi_p,
 \end{align}
 where $E_p=E-\epsilon_A$, $E_d=E-\epsilon_d-\epsilon_B$ and
 with
@@ -139,7 +139,7 @@ H_d&=T_d+U_d.
 If the neutron state $\phi_n$ is bound, we can drop the second term of the right hand side of (\ref{eq20}) (see notes on transfer),
  \begin{align}\label{eq62}
  \nonumber &(H_p-E_p)\chi_p=-\bra{\phi_n}V_p\ket{\phi_d}\chi_d\\
- &(H_d-E_d)\chi_d=-\bra{\phi_d}V_p\ket{\chi_n}\chi_p-\braket{\phi_d|\phi_n}(H_p-E_p)\chi_p,
+ &(H_d-E_d)\chi_d=-\bra{\phi_d}V_p\ket{\phi_n}\chi_p-\braket{\phi_d|\phi_n}(H_p-E_p)\chi_p,
  \end{align}
 or
  \begin{align}\label{eq63}
@@ -172,40 +172,11 @@ with
 \nonumber \tilde H_p&=T_p+U_p+\tilde U_p,\\
 \tilde U_p&=\bra{\phi_n}V_p\ket{\phi_d}\,\tilde G_d\,\bra{\phi_d}V_p\ket{\phi_n}.
 \end{align}  
-
-\begin{align}\label{eq23}
-\nonumber (H_p-E_p)\chi_p(\mathbf r_p)&=\sum_n a_n F_{1,n}(\mathbf r_p)\\
-(H_d-E_d)\chi_d(\mathbf r_d)&=(H_d-E_d)\sum_n a_n g_n(\mathbf r_d)+\sum_n a_n F_{2,n}(\mathbf r_d),
-\end{align}
-where we have defined
-\begin{align}\label{eq22}
-\nonumber&F_{1,n}(\mathbf r_p)=\int \phi_n^*(\mathbf r_n)V_p(r_{pn},r_p)\phi_d(\mathbf r_{pn})\chi_d(\mathbf r_d)d\mathbf r_n\,,\\
- \nonumber&F_{2,n}(\mathbf r_d)= \int \phi_d^*(\mathbf r_{pn})V_d(r_{p},r_n)\phi_n(\mathbf r_n)\chi_p(\mathbf r_p)d\mathbf r_{pn},\\
-  & g_n(\mathbf r_d)=\int \phi_d^*(\mathbf r_{pn})\phi_n(\mathbf r_{n})\chi_p(\mathbf r_p)d\mathbf r_{pn}.
-\end{align}
-Defining the Green's function
-\begin{align}\label{eq30}
-G=\frac{1}{E_d-H_d+i\epsilon},
-\end{align}
-we can solve for $\chi_d$ using the second equation in (\ref{eq23}),
-\begin{align}\label{eq24}
-&\chi_d(\mathbf r_d)=\sum_n a_n g_n(\mathbf r_d)+\sum_n a_n\int G(\mathbf r_d,\mathbf r_d')F_{2,n}(\mathbf r'_d)d\mathbf r_d'\,,
-\end{align}
-from the first equation in (\ref{eq23}),
-\begin{align}\label{eq26}
-\left(T_p-U_p^{OPT}-E_p\right)\chi_p(\mathbf r_p)=0\,,
-\end{align}
-with
-\begin{equation}\label{eq27}
-\nonumber U_{p}^{OPT}\chi_p(\mathbf r_p)=\left(U_p(r_p)+U_g(\mathbf r_p,\mathbf r'_p)+U_F(\mathbf r_p,\mathbf r'_p)\right)\chi_p(\mathbf r_p),
-\end{equation}
-where we have divided the optical potential in a local, an overlap and a transfer component,
- \begin{align}\label{eq52}
-\nonumber U_g(\mathbf r_p,\mathbf r'_p)\chi_p(\mathbf r_p)=&\sum_n a_n\int \phi_n^*(\mathbf r_n)V_p(r_{pn},r_p)\phi_d(\mathbf r_{pn})g_n(\mathbf r_d)d\mathbf r_n\\
-\nonumber =\sum_n a_n&\int \phi_n^*(\mathbf r_n)V_p(r_{pn},r_p)\phi_d(\mathbf r_{pn})\int \phi_d^*(\mathbf r'_{pn})\phi_n(\mathbf r'_{n})\chi_p(\mathbf r'_p)d\mathbf r'_{pn}d\mathbf r_n\\
-\nonumber U_F(\mathbf r_p,\mathbf r'_p)\chi_p(\mathbf r_p)=&\sum_n a_n\int  \phi_n^*(\mathbf r_n)V_p(r_{pn},r_p)\phi_d(\mathbf r_{pn})\int G(\mathbf r_d,\mathbf r_d')F_{2,n}(\mathbf r'_d)d\mathbf r_d'd\mathbf r_n\\
-\nonumber =\sum_n a_n\int  \phi_n^*(\mathbf r_n)&V_p(r_{pn},r_p)\phi_d(\mathbf r_{pn})\\
-\times \int G(\mathbf r_d,\mathbf r_d')&\phi_d^*(\mathbf r'_{pn})V_d(r'_{p},r'_n)\phi_n(\mathbf r'_n)\chi_p(\mathbf r'_p)d\mathbf r'_{pn}d\mathbf r_d'd\mathbf r_n.
+We can write down explicitly the non--local potential
+  \begin{align}\label{eq52}
+\nonumber \tilde U_p(\mathbf r_p,\mathbf r'_p)&\chi_p(\mathbf r_p)
+ =   \int  \phi_n^*(\mathbf r_n)V_p(r_{pn},r_p)\phi_d(\mathbf r_{pn})\\
+\times \int \tilde G_d(\mathbf r_d,\mathbf r_d')&\phi_d^*(\mathbf r'_{pn})V_p(r'_{pn},r'_p)\phi_n(\mathbf r'_n)\chi_p(\mathbf r'_p)d\mathbf r'_{pn}d\mathbf r_d'd\mathbf r_n.
  \end{align}
 The non--local term can be made local within the local--momentum approximation,
 \begin{align}\label{eq28}
@@ -217,37 +188,18 @@ with
 \end{align}
 We can then define a local version of the optical potential,
 \begin{align}\label{eq31}
-U_F(\mathbf r_p,\mathbf r'_p)\chi_p(\mathbf r_p)\approx U^L_F(\mathbf r_p)\chi_p(\mathbf r_p),
+\tilde U_p(\mathbf r_p,\mathbf r'_p)\chi_p(\mathbf r_p)\approx U^L_p(\mathbf r_p)\chi_p(\mathbf r_p),
 \end{align}
 with
  \begin{align}\label{eq32}
-\nonumber U^L_F(\mathbf r_p) &=\sum_n a_n e^{i\mathbf k_0(r_p)\mathbf r_p}\int  \phi_n^*(\mathbf r_n)V_p(r_{pn},r_p)\phi_d(\mathbf r_{pn})\\
-\times \int G(\mathbf r_d,\mathbf r_d')&\phi_d^*(\mathbf r'_{pn})V_d(r'_{p},r'_n)\phi_n(\mathbf r'_n)d\mathbf r'_{pn}e^{-i\mathbf k_0(r_p)\mathbf r'_p}d\mathbf r_d'd\mathbf r_{pn}'d\mathbf r_n.
+\nonumber U^L_p(\mathbf r_p) &= e^{i\mathbf k_0(r_p)\mathbf r_p}\int  \phi_n^*(\mathbf r_n)V_p(r_{pn},r_p)\phi_d(\mathbf r_{pn})\\
+\times \int \tilde G_d(\mathbf r_d,\mathbf r_d')&\phi_d^*(\mathbf r'_{pn})V_p(r'_{pn},r'_p)\phi_n(\mathbf r'_n)e^{-i\mathbf k_0(r_p)\mathbf r'_p}d\mathbf r'_{pn}d\mathbf r_d'd\mathbf r_n.
  \end{align}
 \subsection{Partial wave decomposition}
-%Let's first write down the partial wave decomposition of the form factors,
-%\begin{align}\label{eq39}
-%V_{1(2)}(\mathbf r_{p})=\sum_{lm}\mathcal V^{lm}_{1(2)}(r_p)Y_m^l(\hat r_p),
-%\end{align}
-%with
-%\begin{align}\label{eq40}
-%\mathcal V^{lm}_{1(2)}(r_p)=\int d\Omega_p Y_m^{l*}(\hat r_p) V_{1(2)}(\mathbf r_p)
-%\end{align}
-%
-%So
-%\begin{align}\label{eq41}
-%\nonumber\mathcal V^{lm}_{1}(r_p)=\frac{1}{\sqrt{4\pi(2l+1)}}&\int r^2_n\,dr_nd\Omega_nd\Omega_p\\
-%&\times u_n(r_n)u_d(r_{pn})V_{pn}(r_{pn})\left[Y^{l}(\hat r_n) Y^{l}(\hat r_p)\right]^0_0.
-%\end{align}
-%If we take $\mathbf r_p$ to be along the $z$--axis, we get
-%\begin{align}\label{eq42}
-%\mathcal \nonumber V^{lm}_{1}(r_p)=&\frac{2\pi^{1/2}(-1)^m}{\sqrt{(2l+1)}}\int r^2_n\,dr_n \sin\theta\,d\theta u_n(r_n)u_d(r_{pn})\\
-%&\times V_{pn}(r_{pn})Y^{l}_0(\hat r_n)\delta_{l,l_n}\delta_{m,m_n},
-%\end{align}
 
 The Green's function can be written as
 \begin{align}\label{eq44}
-G(\mathbf r_d,\mathbf r_d')=\sum_{l_d}\sqrt{2l_d+1}\frac{f_{l_d}(r_{d<})g_{l_d}(r_{d>})}{k_dr_dr'_d}\left[Y^{l_d}(\hat r_d) Y^{l_d}(\hat r'_d)\right]^0_0,
+\tilde G_d(\mathbf r_d,\mathbf r_d')=\sum_{l_d}\sqrt{2l_d+1}\frac{f_{l_d}(r_{d<})g_{l_d}(r_{d>})}{k_dr_dr'_d}\left[Y^{l_d}(\hat r_d) Y^{l_d}(\hat r'_d)\right]^0_0,
 \end{align}
 the plane wave is
 \begin{align}\label{eq45}
@@ -287,28 +239,28 @@ Taking $\mathbf r'_d$ and $\mathbf k_p$ in the $z$ direction, we have
 \end{align}
 and, if we define
  \begin{align}\label{eq48}
-\nonumber I^{l_d}_n(r_d)=&\frac{\sqrt{\pi}}{k_dr_d\,(2l+1)}\sum_{l_p}(2l_p+1)(2l_d+1)\langle l_p\,-m\,l_d\,0\,|\,l\,-m\rangle\\
-\nonumber&\times\langle l_d\,m\,l_p\,0\,|\,l\,0\rangle Y^{l_d}_m(\hat r_d) \int  Y^{l_p}_{-m}(\hat r'_p)Y^{l}_{m}(\hat r'_n)j_{l_p}(k_0(r_p) r'_p)\\
-&\times f_{l_d}(r_{d<})g_{l_d}(r_{d>})u_n(r_n)u_d(r_{pn}) V_{d}(r_{p},r_n,r_d) r'_dr_{pn}^2\sin\theta\, d r_d'dr'_{pn}d\theta.
+\nonumber I_{l_d}(r_d)=&\frac{4\pi^{3/2}}{k_dr_d\,(2l+1)}\sum_{l_p}\sqrt{(2l_p+1)(2l_d+1)}\langle l_p\,-m\,l_d\,0\,|\,l\,-m\rangle\\
+\nonumber&\times\langle l_d\,m\,l_p\,0\,|\,l\,0\rangle  \int  Y^{l_p}_{-m}(\hat r'_p)Y^{l}_{m}(\hat r'_n)j_{l_p}(k_0(r_p) r'_p)\\
+&\times f_{l_d}(r_{d<})g_{l_d}(r_{d>})u_n(r_n)u_d(r_{pn}) V_{d}(r_{p},r_n,r_d) r'_dr_{pn}^{'2}\sin\theta\, d r_d'dr'_{pn}d\theta.
  \end{align}
  we have
  \begin{align}\label{eq53}
- \nonumber U^L_F(\mathbf r_p)&=e^{i\mathbf k_0(r_p)\mathbf r_p}\sum_{n} a_n \int u_n^*(r_n)V_p(r_{pn},r_p)u_d(r_{pn})  Y^{l}_{-m}(\hat r_n)Y^{l_d}_m(\hat r_d) I^{l_d}_n(r_d)d\mathbf r_n\\
- &=e^{i\mathbf k_0(r_p)\mathbf r_p}\sum_{nl'} a_n B_{nl'}(r_p)Y_0^{l'}(\hat r_p),
+ \nonumber U^L_p(\mathbf r_p)&=e^{i\mathbf k_0(r_p)\mathbf r_p}\frac{1}{\sqrt{4\pi}}\sum_{l_d} \int u_n^*(r_n)V_p(r_{pn},r_p)u_d(r_{pn})  Y^{l}_{-m}(\hat r_n) I(r_d)Y^{l_d}_m(\hat r_d)d\mathbf r_n\\
+ &=e^{i\mathbf k_0(r_p)\mathbf r_p}\sum_{l'}B_{l'}(r_p)Y_0^{l'}(\hat r_p),
  \end{align}
  with 
  \begin{equation}\label{eq54}
- B_{nl'}(r_p)=\sum_{l_d}\int u_n^*(r_n)V_p(r_{pn},r_p)u_d(r_{pn})  Y^{l}_{-m}(\hat r_n)Y^{l_d}_m(\hat r_d)Y^{l'}_0(\hat r_p) I^{l_d}_n(r_d)d\mathbf r_nd\Omega_p.
+ B_{l'}(r_p)=\frac{1}{\sqrt{4\pi}}\sum_{l_d}\int u_n^*(r_n)V_p(r_{pn},r_p)u_d(r_{pn})  Y^{l}_{-m}(\hat r_n)Y^{l_d}_m(\hat r_d)Y^{l'}_0(\hat r_p) I_{l_d}(r_d)d\mathbf r_nd\Omega_p.
  \end{equation}
 Then,
  \begin{align}\label{eq55}
  \nonumber B_{nl'}(r_p)=&\frac{1}{\sqrt{2l'+1}}\sum_{l_d}\langle l\,-m\,l_d\,m\,|\,l'\,0\rangle\int u_n^*(r_n)V_p(r_{pn},r_p)u_d(r_{pn})\\
- &\times  \left\{\left[Y^{l}(\hat r_n)Y^{l_d}(\hat r_d)\right]^{l'}Y^{l'}(\hat r_p)\right\}^0_0 I^{l_d}_n(r_d)d\mathbf r_nd\Omega_p.
+ &\times  \left\{\left[Y^{l}(\hat r_n)Y^{l_d}(\hat r_d)\right]^{l'}Y^{l'}(\hat r_p)\right\}^0_0 I_{l_d}(r_d)d\mathbf r_nd\Omega_p.
  \end{align}
  Taking $\mathbf r'_p$ in the $z$ direction, we have
   \begin{align}\label{eq56}
-  \nonumber B_{nl'}(r_p)=&\frac{4\pi^{3/2}}{\sqrt{2l'+1}}\sum_{l_d}\langle l\,-m\,l_d\,m\,|\,l'\,0\rangle\int u_n^*(r_n)V_p(r_{pn},r_p)u_d(r_{pn})\\
-  &\times  \left[Y^{l}(\hat r_n)Y^{l_d}(\hat r_d)\right]^{l'}_0 I^{l_d}_n(r_d)r^2_n d r_n \sin\theta d\theta.
+  \nonumber B_{l'}(r_p)=&2\pi\sum_{l_d}\langle l\,-m\,l_d\,m\,|\,l'\,0\rangle\int u_n^*(r_n)V_p(r_{pn},r_p)u_d(r_{pn})\\
+  &\times  \left[Y^{l}(\hat r_n)Y^{l_d}(\hat r_d)\right]^{l'}_0 I_{l_d}(r_d)r^2_n d r_n \sin\theta d\theta.
   \end{align}
 If $l=0$, $l_d=l_p$, $l'=l_d$ and
   \begin{align}\label{eq51}
@@ -320,25 +272,19 @@ If $l=0$, $l_d=l_p$, $l'=l_d$ and
   \nonumber I^{l'}_n(r_d;l=0)=&\frac{1}{2k_dr_d}(2l'+1)Y^{l'}_0(\hat r_d) \int  Y^{l'}_0(\hat r'_p)j_{l'}(k_0(r_p) r'_p)f_{l'}(r_{d<})g_{l'}(r_{d>})\\
   &\times u_n(r_n)u_d(r_{pn}) V_{d}(r_{p},r_n,r_d) r'_dr_{pn}^2\sin\theta\, d r_d'dr'_{pn}d\theta.
    \end{align}
-The polarization correction to the optical potential 
+The local approximation for the polarization correction to the optical potential 
  \begin{equation}\label{eq58}
-U^L_F(\mathbf r_p)=e^{i\mathbf k_0(r_p)\mathbf r_p}\sum_{nl'} a_n B_{nl'}(r_p)Y_0^{l'}(\hat r_p),
+U^L_p(\mathbf r_p)=e^{i\mathbf k_0(r_p)\mathbf r_p}\sum_{l'} B_{l'}(r_p)Y_0^{l'}(\hat r_p),
  \end{equation}
-is non--central, but we can evaluate the monopole (central) part  along the incident beam direction, 
+is non--central, but we can evaluate the average over all orientations,
  \begin{equation}\label{eq50}
-U^L_F(r_p)=\frac{e^{i k_0(r_p)r_p}}{\sqrt{4\pi}}\sum_{n} a_n B_{n0}(r_p),
+\bar U^L_F(r_p)=\frac{1}{4\pi}\sum_{l'} B_{l'}(r_p)\int e^{i\mathbf k_0(r_p)\mathbf r_p}Y_0^{l'}(\hat r_p)\,d\Omega_p,
  \end{equation}
-with
-  \begin{equation}\label{eq59}
-   B_{n0}(r_p;l=0)=\sqrt{\pi}\int u_n^*(r_n)V_p(r_{pn},r_p)u_d(r_{pn})   I^{0}_n(r_d;l=0)r^2_n d r_n\,\sin\theta\,d\theta,
-  \end{equation}
-and
-   \begin{align}\label{eq60}
-\nonumber I^{0}_n(r_d;l=0)&=\frac{1}{8\pi k_dr_d} \int j_{0}(k_0(r_p) r'_p)f_{0}(r_{d<})g_{0}(r_{d>})\\
- &\times u_n(r_n)u_d(r_{pn}) V_{d}(r_{p},r_n,r_d) r'_dr_{pn}^2\, d r_d'dr'_{pn}\,\sin\theta\,d\theta.
-   \end{align}
-
-
+ and we get
+ \begin{equation}\label{eq70}
+ \bar U^L_F(r_p)=\frac{1}{4\pi}\sum_{l'}\frac{1}{\sqrt{2l'+1}} B_{l'}(r_p)j_{l'}(k_0(r_p) \,r_p),
+ \end{equation} 
+which is a local, central and  $l$--independent polarization optical potential.
 
 
 
