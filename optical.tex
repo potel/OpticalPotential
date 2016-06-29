@@ -300,19 +300,20 @@ we can write
   \nonumber B^m_{l'}(r_p)=&\frac{2\pi}{\sqrt{(2l'+1)}}\sum_{l_d,l_p}\langle l\,-m\,l_d\,m\,|\,l'\,0\rangle\langle l_d\,m\,l_p\,0\,|\,l\,m\rangle\int u_n^*(r_n)V_p(r_{pn},r_p)u_d(r_{pn})\\
   &\times  \left[Y^{l}(\hat r_n)Y^{l_d}(\hat r_d)\right]^{l'}_0 I_{l_d,l_p}(r_d)r^2_n d r_n \sin\theta d\theta.
   \end{align}
-  \subsubsection{Extraction of central potential}
+  \subsubsection{Extraction of a central potential}
 The local approximation for the polarization correction to the optical potential 
  \begin{equation}\label{eq58}
 U^L_p(\mathbf r_p)=e^{i\mathbf k_0(r_p)\mathbf r_p}\sum_{l'} B^m_{l'}(r_p)Y_0^{l'}(\hat r_p),
  \end{equation}
-is non--central, but we can evaluate the average over all orientations,
+is non--central and $l'$--dependent, but we can evaluate the average over all orientations,
  \begin{equation}\label{eq50}
 \bar U^L_p(r_p)=\frac{1}{4\pi}\sum_{l'} B^m_{l'}(r_p)\int e^{i\mathbf k_0(r_p)\mathbf r_p}Y_0^{l'}(\hat r_p)\,d\Omega_p,
  \end{equation}
  and we get
  \begin{equation}\label{eq70}
- \bar U^L_p(r_p)=\sum_{l'}\sqrt{\frac{2l'+1}{4\pi}} B^m_{l'}(r_p)j_{l'}(k_0(r_p) \,r_p).
+ \bar U^L_p(r_p)=\sum_{l'}\sqrt{\frac{2l'+1}{4\pi}} B^m_{l'}(r_p)j_{l'}(k_0(r_p) \,r_p),
  \end{equation}
+ which do not depend on the orientation of the proton--target coordinate.
 \subsubsection{Average over angular momentum orientations} 
 We have an expression for the polarization that result from the coupling to the transfer to a state with a given projection $m$ of the angular momentum $l$. We should average over all possible projections, 
  \begin{equation}\label{eq79}
