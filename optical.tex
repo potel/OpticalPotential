@@ -231,8 +231,7 @@ We then have
 \nonumber&\times\int \left\{\left[Y^{l_p}(\hat r'_p) Y^{l_d}(\hat r'_d)\right]^lY^l(\hat r'_n)\right\}^0_0j_{l_p}(k_0(r_p) r'_p)\\
 &\times \frac{f_{l_d}(r_{d<})g_{l_d}(r_{d>})}{r'_d}  u_d(r'_d)u_n(r'_n)V_{pn}(r'_{pn}) d\mathbf r_d' d\mathbf r_{pn}'d\mathbf r_n.
  \end{align}
-
-
+Note that we have discarded the remnant term and taken $V_{p}\approx V_{pn}$.
 Taking $\mathbf r'_d$ and $\mathbf k_p$ in the $z$ direction, we have
 \begin{align}\label{eq43}
 \nonumber\mathbf r'_d&=r'_d\left(0,0,1\right),\\
@@ -253,13 +252,13 @@ In this specific configuration,
  \begin{align}\label{eq74}
  \nonumber F(\mathbf r_d)=&\frac{4\pi^{3/2}}{k_dr_d\,(2l+1)}\sum_{l_pl_d}\sqrt{(2l_p+1)(2l_d+1)}\,\langle l_d\,m\,l_p\,0\,|\,l\,m\rangle\,Y^{l_d}_m(\hat r_d)\\
  \nonumber&\times\sum_{M}\langle l_p\,-M\,l_d\,0\,|\,l\,-M\rangle  \int  Y^{l_p}_{-M}(\hat r'_p)Y^{l}_{M}(\hat r'_n)j_{l_p}(k_0(r_p) r'_p)\\
- &\times f_{l_d}(r_{d<})g_{l_d}(r_{d>})u_n(r_n)u_d(r_{pn}) V_{d}(r_{p},r_n,r_d) r'_dr_{pn}^{'2}\sin\theta\, d r_d'dr'_{pn}d\theta.
+ &\times f_{l_d}(r_{d<})g_{l_d}(r_{d>})u_n(r'_n)u_d(r'_{pn}) V_{pn}(r'_{pn}) r'_dr_{pn}^{'2}\sin\theta\, d r_d'dr'_{pn}d\theta.
  \end{align}
  If we define
  \begin{align}\label{eq48}
 \nonumber I_{l_d,l_p}(r_d)=&\frac{4\pi^{3/2}}{k_dr_d\,(2l+1)}\sqrt{(2l_p+1)(2l_d+1)}\\
 \nonumber&\times\sum_{M}\langle l_p\,-M\,l_d\,0\,|\,l\,-M\rangle  \int  Y^{l_p}_{-M}(\hat r'_p)Y^{l}_{M}(\hat r'_n)j_{l_p}(k_0(r_p) r'_p)\\
-&\times f_{l_d}(r_{d<})g_{l_d}(r_{d>})u_n(r_n)u_d(r_{pn}) V_{d}(r_{p},r_n,r_d) r'_dr_{pn}^{'2}\sin\theta\, d r_d'dr'_{pn}d\theta,
+&\times f_{l_d}(r_{d<})g_{l_d}(r_{d>})u_n(r'_n)u_d(r'_{pn}) V_{pn}(r'_{pn}) r'_dr_{pn}^{'2}\sin\theta\, d r_d'dr'_{pn}d\theta,
  \end{align}
  we get
  \begin{align}\label{eq75}
@@ -268,7 +267,7 @@ In this specific configuration,
  Defining
  \begin{align}\label{eq54}
   B_{l'}^m(r_p)=
- &\frac{1}{\sqrt{4\pi}}\int u_n^*(r_n)V_p(r_{pn},r_p)u_d(r_{pn})  Y^{l}_{-m}(\hat r_n)Y^{l'}_0(\hat r_p)F(\mathbf r_d) d\mathbf r_nd\Omega_p,
+ &\frac{1}{\sqrt{4\pi}}\int u_n^*(r_n)V_{pn}(r_{pn})u_d(r_{pn})  Y^{l}_{-m}(\hat r_n)Y^{l'}_0(\hat r_p)F(\mathbf r_d) d\mathbf r_nd\Omega_p,
  \end{align} 
  we have
  \begin{align}\label{eq53}
@@ -281,7 +280,7 @@ In this specific configuration,
   \end{align}
 we can write
  \begin{align}\label{eq55}
- \nonumber  B_{l'}^m(r_p)=&\frac{(-1)^{l'}}{\sqrt{(2l'+1)4\pi}}\sum_{l_d,l_p}\langle l\,-m\,l_d\,m\,|\,l'\,0\rangle\langle l_d\,m\,l_p\,0\,|\,l\,m\rangle\int u_n^*(r_n)V_p(r_{pn},r_p)u_d(r_{pn})\\
+ \nonumber  B_{l'}^m(r_p)=&\frac{(-1)^{l'}}{\sqrt{(2l'+1)4\pi}}\sum_{l_d,l_p}\langle l\,-m\,l_d\,m\,|\,l'\,0\rangle\langle l_d\,m\,l_p\,0\,|\,l\,m\rangle\int u_n^*(r_n)V_{pn}(r_{pn})u_d(r_{pn})\\
  &\times  \left\{\left[Y^{l}(\hat r_n)Y^{l_d}(\hat r_d)\right]^{l'}Y^{l'}(\hat r_p)\right\}^0_0 I_{l_d,l_p}(r_d)d\mathbf r_nd\Omega_p.
  \end{align}
  We can evaluate the above integral in the specific configuration
@@ -297,7 +296,7 @@ we can write
  \end{align}
  Including the $8\pi^2$ factor, we thus have 
   \begin{align}\label{eq56}
-  \nonumber B^m_{l'}(r_p)=&\frac{2\pi}{\sqrt{(2l'+1)}}\sum_{l_d,l_p}\langle l\,-m\,l_d\,m\,|\,l'\,0\rangle\langle l_d\,m\,l_p\,0\,|\,l\,m\rangle\int u_n^*(r_n)V_p(r_{pn},r_p)u_d(r_{pn})\\
+  \nonumber B^m_{l'}(r_p)=&\frac{2\pi}{\sqrt{(2l'+1)}}\sum_{l_d,l_p}\langle l\,-m\,l_d\,m\,|\,l'\,0\rangle\langle l_d\,m\,l_p\,0\,|\,l\,m\rangle\int u_n^*(r_n)V_{pn}(r_{pn})u_d(r_{pn})\\
   &\times  \left[Y^{l}(\hat r_n)Y^{l_d}(\hat r_d)\right]^{l'}_0 I_{l_d,l_p}(r_d)r^2_n d r_n \sin\theta d\theta.
   \end{align}
   \subsubsection{Extraction of a central potential}
@@ -313,7 +312,7 @@ is non--central and $l'$--dependent, but we can evaluate the average over all or
  \begin{equation}\label{eq70}
  \bar U^L_p(r_p)=\sum_{l'}\sqrt{\frac{2l'+1}{4\pi}} B^m_{l'}(r_p)j_{l'}(k_0(r_p) \,r_p),
  \end{equation}
- which do not depend on the orientation of the proton--target coordinate.
+ which, of course, do not depend on the orientation of the proton--target coordinate.
 \subsubsection{Average over angular momentum orientations} 
 We have an expression for the polarization that result from the coupling to the transfer to a state with a given projection $m$ of the angular momentum $l$. We should average over all possible projections, 
  \begin{equation}\label{eq79}
@@ -321,7 +320,7 @@ We have an expression for the polarization that result from the coupling to the 
  \end{equation}
  If we define 
   \begin{align}\label{eq81}
-  \nonumber A_{l_d,l_p}(r_p)=&\frac{2\pi}{\sqrt{(2l'+1)}}\int u_n^*(r_n)V_p(r_{pn},r_p)u_d(r_{pn})\\
+  \nonumber A_{l_d,l_p}(r_p)=&\frac{2\pi}{\sqrt{(2l'+1)}}\int u_n^*(r_n)V_{pn}(r_{pn})u_d(r_{pn})\\
   &\times  \left[Y^{l}(\hat r_n)Y^{l_d}(\hat r_d)\right]^{l'}_0 I_{l_d,l_p}(r_d)r^2_n d r_n \sin\theta d\theta,
   \end{align}
 we can write
@@ -334,11 +333,11 @@ We can then summarize all the above results with the following expressions and d
  \begin{align}\label{eq83}
  \nonumber I_{l_d,l_p}(r_d)=&\frac{4\pi^{3/2}}{k_dr_d\,(2l+1)}\sqrt{(2l_p+1)(2l_d+1)}\\
  \nonumber&\times\sum_{M}\langle l_p\,-M\,l_d\,0\,|\,l\,-M\rangle  \int  Y^{l_p}_{-M}(\hat r'_p)Y^{l}_{M}(\hat r'_n)j_{l_p}(k_0(r_p) r'_p)\\
- &\times f_{l_d}(r_{d<})g_{l_d}(r_{d>})u_n(r_n)u_d(r_{pn}) V_{d}(r_{p},r_n,r_d) r'_dr_{pn}^{'2}\sin\theta\, d r_d'dr'_{pn}d\theta,
+ &\times f_{l_d}(r_{d<})g_{l_d}(r_{d>})u_n(r'_n)u_d(r'_{pn}) V_{pn}(r'_{pn}) r'_dr_{pn}^{'2}\sin\theta\, d r_d'dr'_{pn}d\theta,
  \end{align}
  and
  \begin{align}\label{eq82}
- \nonumber B_{l_p}(r_p)=&\frac{\pi^{3/2}}{\sqrt{2l_p+1}}\sum_{l_d}\int u_n^*(r_n)V_p(r_{pn},r_p)u_d(r_{pn})\\
+ \nonumber B_{l_p}(r_p)=&\frac{\pi^{3/2}}{\sqrt{2l_p+1}}\sum_{l_d}\int u_n^*(r_n)V_{pn}(r_{pn})u_d(r_{pn})\\
  &\times  \left[Y^{l}(\hat r_n)Y^{l_d}(\hat r_d)\right]^{l_p}_0 I_{l_d,l_p}(r_d)r^2_n d r_n \sin\theta d\theta,
  \end{align}
  and finally,
