@@ -144,12 +144,12 @@ If the neutron state $\phi_n$ is bound, we can drop the second term of the right
 or
  \begin{align}\label{eq63}
  \nonumber &(H_p-E_p)\chi_p=-\bra{\phi_n}V_p\ket{\phi_d}\chi_d\\
- &(\tilde H_d-E_d)\chi_d=-\bra{\phi_d}V_p\ket{\phi_n}\chi_p,
+ &(\widetilde H_d-E_d)\chi_d=-\bra{\phi_d}V_p\ket{\phi_n}\chi_p,
  \end{align}
  with
   \begin{align}\label{eq64}
-  \nonumber \tilde H_d&=H_d-\braket{\phi_d|\phi_n}\bra{\phi_n}V_p\ket{\phi_d}=T_d+U_d-\tilde U_d,\\
-   \tilde U_d&=\braket{\phi_d|\phi_n}\bra{\phi_n}V_p\ket{\phi_d}.
+  \nonumber \widetilde H_d&=H_d-\braket{\phi_d|\phi_n}\bra{\phi_n}V_p\ket{\phi_d}=T_d+U_d-\widetilde U_d,\\
+   \widetilde U_d&=\braket{\phi_d|\phi_n}\bra{\phi_n}V_p\ket{\phi_d}.
   \end{align}
   We can then solve for $\chi_d$,
    \begin{align}\label{eq65}
@@ -157,26 +157,26 @@ or
    \end{align} 
    with
       \begin{align}\label{eq66}
-\tilde G_d=(\tilde H_d-E_d)^{-1},
+\widetilde G_d=(\widetilde H_d-E_d)^{-1},
       \end{align} 
 the equation for $\chi_p$ can then be written as
       \begin{align}\label{eq67}
-(H_p-E_p)\chi_p=-\bra{\phi_n}V_p\ket{\phi_d}\,\tilde G_d\,\bra{\phi_d}V_p\ket{\phi_n}\chi_p,
+(H_p-E_p)\chi_p=-\bra{\phi_n}V_p\ket{\phi_d}\,\widetilde G_d\,\bra{\phi_d}V_p\ket{\phi_n}\chi_p,
       \end{align}
 or
 \begin{align}\label{eq68}
-(\tilde H_p-E_p)\chi_p=0,
+(\widetilde H_p-E_p)\chi_p=0,
 \end{align}      
 with
 \begin{align}\label{eq69}
-\nonumber \tilde H_p&=T_p+U_p+\tilde U_p,\\
-\tilde U_p&=\bra{\phi_n}V_p\ket{\phi_d}\,\tilde G_d\,\bra{\phi_d}V_p\ket{\phi_n}.
+\nonumber \widetilde H_p&=T_p+U_p+\widetilde U_p,\\
+\widetilde U_p&=\bra{\phi_n}V_p\ket{\phi_d}\,\tilde G_d\,\bra{\phi_d}V_p\ket{\phi_n}.
 \end{align}  
 We can write down explicitly the non--local potential
   \begin{align}\label{eq52}
-\nonumber \tilde U_p(\mathbf r_p,\mathbf r'_p)&\chi_p(\mathbf r_p)
+\nonumber \widetilde U_p(\mathbf r_p,\mathbf r'_p)&\chi_p(\mathbf r_p)
  =   \int  \phi_n^*(\mathbf r_n)V_p(r_{pn},r_p)\phi_d(\mathbf r_{pn})\\
-\times \int \tilde G_d(\mathbf r_d,\mathbf r_d')&\phi_d^*(\mathbf r'_{pn})V_p(r'_{pn},r'_p)\phi_n(\mathbf r'_n)\chi_p(\mathbf r'_p)d\mathbf r'_{pn}d\mathbf r_d'd\mathbf r_n.
+\times \int \widetilde G_d(\mathbf r_d,\mathbf r_d')&\phi_d^*(\mathbf r'_{pn})V_p(r'_{pn},r'_p)\phi_n(\mathbf r'_n)\chi_p(\mathbf r'_p)d\mathbf r'_{pn}d\mathbf r_d'd\mathbf r_n.
  \end{align}
 The non--local term can be made local within the local--momentum approximation,
 \begin{align}\label{eq28}
@@ -188,11 +188,11 @@ with
 \end{align}
 We can then define a local version of the optical potential,
 \begin{align}\label{eq31}
-\tilde U_p(\mathbf r_p,\mathbf r'_p)\chi_p(\mathbf r_p)\approx U^L_p(\mathbf r_p)\chi_p(\mathbf r_p).
+\widetilde U_p(\mathbf r_p,\mathbf r'_p)\chi_p(\mathbf r_p)\approx U^L_p(\mathbf r_p)\chi_p(\mathbf r_p).
 \end{align}
 Defining 
 \begin{align}\label{eq71}
-F(\mathbf r_d)=\int \tilde G_d(\mathbf r_d,\mathbf r_d')&\phi_d^*(\mathbf r'_{pn})V_p(r'_{pn},r'_p)\phi_n(\mathbf r'_n)e^{-i\mathbf k_0(r_p)\mathbf r'_p}d\mathbf r'_{pn}\,  d\mathbf r_d',
+F(\mathbf r_d)=\int \widetilde G_d(\mathbf r_d,\mathbf r_d')&\phi_d^*(\mathbf r'_{pn})V_p(r'_{pn},r'_p)\phi_n(\mathbf r'_n)e^{-i\mathbf k_0(r_p)\mathbf r'_p}d\mathbf r'_{pn}\,  d\mathbf r_d',
 \end{align}
 we have
  \begin{align}\label{eq32}
@@ -202,7 +202,7 @@ we have
 
 The Green's function can be written as
 \begin{align}\label{eq44}
-\tilde G_d(\mathbf r_d,\mathbf r_d')=\sum_{l_d}\sqrt{2l_d+1}\frac{f_{l_d}(r_{d<})g_{l_d}(r_{d>})}{k_dr_dr'_d}\left[Y^{l_d}(\hat r_d) Y^{l_d}(\hat r'_d)\right]^0_0,
+\widetilde G_d(\mathbf r_d,\mathbf r_d')=\sum_{l_d}\sqrt{2l_d+1}\frac{f_{l_d}(r_{d<})g_{l_d}(r_{d>})}{k_dr_dr'_d}\left[Y^{l_d}(\hat r_d) Y^{l_d}(\hat r'_d)\right]^0_0,
 \end{align}
 the plane wave is
 \begin{align}\label{eq45}
@@ -311,17 +311,17 @@ U^L_p(\mathbf r_p)=e^{i\mathbf k_0(r_p)\mathbf r_p}\sum_{l'} B^m_{l'}(r_p)Y_0^{l
  \end{equation}
 is non--central and $l'$--dependent, but we can evaluate the average over all orientations,
  \begin{equation}\label{eq50}
-\bar U^L_p(r_p)=\frac{1}{4\pi}\sum_{l'} B^m_{l'}(r_p)\int e^{i\mathbf k_0(r_p)\mathbf r_p}Y_0^{l'}(\hat r_p)\,d\Omega_p,
+\overline U^L_p(r_p)=\frac{1}{4\pi}\sum_{l'} B^m_{l'}(r_p)\int e^{i\mathbf k_0(r_p)\mathbf r_p}Y_0^{l'}(\hat r_p)\,d\Omega_p,
  \end{equation}
  and we get
  \begin{equation}\label{eq70}
- \bar U^L_p(r_p)=\sum_{l'}\sqrt{\frac{2l'+1}{4\pi}} B^m_{l'}(r_p)j_{l'}(k_0(r_p) \,r_p),
+ \overline U^L_p(r_p)=\sum_{l'}\sqrt{\frac{2l'+1}{4\pi}} B^m_{l'}(r_p)j_{l'}(k_0(r_p) \,r_p),
  \end{equation}
  which, of course, do not depend on the orientation of the proton--target coordinate.
 \subsubsection{Average over angular momentum orientations} 
 We have an expression for the polarization that result from the coupling to the transfer to a state with a given projection $m$ of the angular momentum $l$. We should average over all possible projections, 
  \begin{equation}\label{eq79}
- \bar U^L_p(r_p)=\frac{1}{2l+1}\sum_{l',m}\sqrt{\frac{2l'+1}{4\pi}} B^m_{l'}(r_p)j_{l'}(k_0(r_p) \,r_p).
+ \overline U^L_p(r_p)=\frac{1}{2l+1}\sum_{l',m}\sqrt{\frac{2l'+1}{4\pi}} B^m_{l'}(r_p)j_{l'}(k_0(r_p) \,r_p).
  \end{equation}
  If we define 
   \begin{align}\label{eq81}
@@ -346,7 +346,7 @@ We can then summarize all the above results with the following expressions and d
  \end{align}
  and finally,
  \begin{equation}\label{eq84}
- \bar U^L_p(r_p)=\frac{1}{\sqrt{2l+1}}\sum_{l_p} B_{l_p}(r_p)j_{l_p}(k_0(r_p) \,r_p),
+ \overline U^L_p(r_p)=\frac{1}{\sqrt{2l+1}}\sum_{l_p} B_{l_p}(r_p)j_{l_p}(k_0(r_p) \,r_p),
  \end{equation} 
 which is a local and central polarization optical potential.
 
