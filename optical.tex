@@ -349,20 +349,58 @@ We can then summarize all the above results with the following expressions and d
  \overline U^L_p(r_p)=\frac{1}{\sqrt{2l+1}}\sum_{l_p} B_{l_p}(r_p)j_{l_p}(k_0(r_p) \,r_p),
  \end{equation} 
 which is a local and central polarization optical potential.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\subsubsection{The non--orthogonality potential $\widetilde{U}_d$}
+The propagator in the deuteron channel contains, aside from the usual optical potential $U_d(r_p)$, a non central non--orthogonality potential $\widetilde{U}_d(\mathbf r_d)$,
+  \begin{align}\label{eq86}
+  \widetilde U_d(\mathbf r_d)=\braket{\phi_d|\phi_n}\bra{\phi_n}V_p\ket{\phi_d}.
+  \end{align}
+Let's consider separately the overlap and the potential matrix element,
+  \begin{align}\label{eq87}
+  \braket{\phi_d|\phi_n}=g_d(r_d)Y^l_m(\hat r_d),
+  \end{align}
+  and
+    \begin{align}\label{eq88}
+\bra{\phi_n}V_p\ket{\phi_d}=v_d(r_d)Y^l_{-m}(\hat r_d),
+    \end{align}
+    with
+  \begin{align}\label{eq89}
+g_d(r_d)=\frac{1}{\sqrt{4\pi}}\int u_d(r_{pn})u_n(r_n)Y^l_{-m}(\hat r_d)Y^l_{m}(\hat r_n)d\mathbf r_nd\Omega_d,
+  \end{align}
+and
+  \begin{align}\label{eq90}
+  v_d(r_d)=\frac{1}{\sqrt{4\pi}}\int u_d(r_{pn})u_n(r_n)V_p(r_{pn})Y^l_{-m}(\hat r_d)Y^l_{m}(\hat r_n)d\mathbf r_nd\Omega_d.
+  \end{align}
+In order to calculate the overlap $g_d$, we first note that, in order for the integral to be different from zero we must keep only the term coupled to zero total angular momentum, i.e., we can make the replacement
+  \begin{align}\label{eq91}
+Y^l_{-m}(\hat r_d)Y^l_{m}(\hat r_n)\rightarrow \frac{(-1)^{l+m}}{\sqrt{2l+1}}\left[Y^l(\hat r_d)Y^l(\hat r_n)\right]^0_0.
+  \end{align}
+The rotationally invariant integrand can then be evaluated in the configuration
+\begin{align}\label{eq95}
+\nonumber\mathbf r_d&=r_d\left(0,0,1\right),\\
+\nonumber\mathbf r_{n}&=r_{n}\left(-\sin\theta,0,\cos\theta\right),\\
+ \mathbf r_{pn}&=2(\mathbf r_n-\mathbf r_d)=2\left(-r_{n}\sin\theta,0,r_n\cos\theta-r_{d}\right),
+\end{align}
+ and the result multiplied by $8\pi^2$. In this configuration,
+  \begin{align}\label{eq92}
+\frac{(-1)^{l+m}}{\sqrt{2l+1}}\left[Y^l(\hat r_d)Y^l(\hat r_n)\right]^0_0=\frac{1}{\sqrt{4\pi}}\frac{(-1)^m}{\sqrt{2l+1}}Y^l_0(\hat r_n),
+  \end{align}
+so
+  \begin{align}\label{eq93}
+  g_d(r_d)=\frac{1}{4\pi}\frac{(-1)^m}{\sqrt{2l+1}}\int u_d(r_{pn})u_n(r_n)Y^l_{0}(\hat r_n)r_n^2\,\sin\theta\,d\theta.
+  \end{align}
+Similarly,
+  \begin{align}\label{eq94}
+  v_d(r_d)=\frac{1}{4\pi}\frac{(-1)^m}{\sqrt{2l+1}}\int u_d(r_{pn})u_n(r_n)V_p(r_{pn})Y^l_{0}(\hat r_n)r_n^2\,\sin\theta\,d\theta.
+  \end{align}
+Then,
+  \begin{align}\label{eq96}
+ \nonumber  \widetilde U_d(\mathbf r_d)&=g_d(r_d)v_d(r_d) Y^l_m(\hat r_d)Y^l_{-m}(\hat r_d)\\
+ &=g_d(r_d)v_d(r_d)\sum_L \langle l\,m\,l\,-m\,|\,L\,0\rangle\left[Y^l(\hat r_d)Y^l(\hat r_d)\right]^L_0.
+  \end{align}
+This potential is non central, but a central version can be obtained by integrating over the whole $\Omega_d$ angular range and dividing by $4\pi$. We obtain
+  \begin{align}\label{eq97}
+   \widetilde U_d(r_d)=\frac{1}{4\pi}\frac{1}{\sqrt{2l+1}}\,g_d(r_d)v_d(r_d).
+  \end{align}
 
 
 
