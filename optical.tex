@@ -151,6 +151,18 @@ or
   \nonumber \widetilde H_d&=H_d-\braket{\phi_d|\phi_n}\bra{\phi_n}V_p\ket{\phi_d}=T_d+U_d-\widetilde U_d,\\
    \widetilde U_d&=\braket{\phi_d|\phi_n}\bra{\phi_n}V_p\ket{\phi_d}.
   \end{align}
+  The definition of the non--orthogonality potential $\widetilde U_d$ allows us to cast the problem in the form of the diagonalization of a non--Hermitian matrix,
+  \begin{align}\label{eq98}
+\left[\begin{matrix}
+ H_p-E_p & \bra{\phi_n}V_p\ket{\phi_d} \\ 
+ \bra{\phi_d}V_p\ket{\phi_n} & \widetilde H_d-E_d
+\end{matrix}\right]\cdot
+\left[\begin{matrix}
+\chi_p  \\ 
+\chi_d
+\end{matrix}\right]=0.
+  \end{align}  
+  It is thus an example of the general problem of the mixing of two unbound levels with widths, as discussed by P. von Brentano, and, more recently, by Laskin et al. in connection to the GPV.
   We can then solve for $\chi_d$,
    \begin{align}\label{eq65}
 \chi_d=\widetilde G_d\bra{\phi_d}V_p\ket{\phi_n}\chi_p,
@@ -399,7 +411,7 @@ Then,
   \end{align}
 This potential is non central, but a central version can be obtained by integrating over the whole $\Omega_d$ angular range and dividing by $4\pi$. We obtain
   \begin{align}\label{eq97}
-   \widetilde U_d(r_d)=\frac{1}{4\pi}\frac{1}{\sqrt{2l+1}}\,g_d(r_d)v_d(r_d).
+   \widetilde U_d(r_d)=\frac{1}{4\pi}\,g_d(r_d)v_d(r_d).
   \end{align}
 
 
